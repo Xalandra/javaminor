@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Java minor; opdracht 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.17/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.20/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+    <script src="httpService.js"></script>
+    <script src="httpFactory.js"></script>
+    <script src="laptopService.js"></script>
+    <script src="laptopFactory.js"></script>
+  </head>
+
+  <body>
+    <div ng-controller="MainController as mctrl">
+  	
+    <div ng-view></div>
+
+    <!-- <p>
+      <div ng-repeat="(pc,v) in mctrl.getAllList" class="pcBlock">
+        <img src="{{v.afb}}"><br />
+        <p class="center">{{v.type}}, {{v.price}} euro</p><br />
+        <button ng-click="mctrl.config(v.number)">Klik laptop</button>
+      </div>
+    </p>
+
+    <div style="clear:both;"></div> -->
+
+
+
+
+    <hr />
+    <button ng-click="mctrl.restCall()">Klik voor http</button>
+    <p>{{mctrl.httpResults}}</p>
+
+    <hr />
+    <button ng-click="mctrl.javaCall()">Klik voor java test</button>
+    <p>{{mctrl.javaResult}}</p>
+
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,11 @@
+	<p><h1 id="title">{{mctrl.title}}</h1></p>
+
+	<p>
+      <div ng-repeat="(pc,v) in mctrl.getAllList" class="pcBlock">
+        <img src="{{v.afb}}"><br />
+        <p class="center">{{v.type}}, {{v.price}} euro</p><br />
+        <button ng-click="mctrl.config(v.number)">Klik laptop</button>
+      </div>
+    </p>
+
+    <div style="clear:both;"></div>
